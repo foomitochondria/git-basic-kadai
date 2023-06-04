@@ -1,0 +1,89 @@
+shiodaryouko@fuumitokondoria git_challenge % git add hello_world.txt
+shiodaryouko@fuumitokondoria git_challenge % git commit -m "first_time"
+[main 7674028] first_time
+ 2 files changed, 1 insertion(+)
+ create mode 100644 git_challenge/hello_world.txt
+ rename git_tutorial/{ => move_test}/sample.txt (100%)
+shiodaryouko@fuumitokondoria git_challenge % git add hello_world.txt
+shiodaryouko@fuumitokondoria git_challenge % git commit -"日本語を追記"      
+error: unknown non-ascii option in string: `-日本語を追記'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+shiodaryouko@fuumitokondoria git_challenge % git commit -m "日本語を追記"
+[main cda2f93] 日本語を追記
+ 1 file changed, 1 insertion(+)
+shiodaryouko@fuumitokondoria git_challenge % git log
+commit cda2f933315001d9e350e6dc8b76c5472dcf3240 (HEAD -> main)
+Author: foomitochondria <saltpan262433@gmail.com>
+Date:   Sun Jun 4 17:52:30 2023 +0900
+
+    日本語を追記
+
+commit 76740287247e95c50cf3a6b49019953a840a30b4
+Author: foomitochondria <saltpan262433@gmail.com>
+Date:   Sun Jun 4 17:48:16 2023 +0900
+
+    first_time
+
+commit 621ab9ee664521daf84bce5fd5fd87c2713d6874
+Author: foomitochondria <saltpan262433@gmail.com>
+Date:   Sun Jun 4 11:35:43 2023 +0900
+
+    test commit
+shiodaryouko@fuumitokondoria git_challenge %
